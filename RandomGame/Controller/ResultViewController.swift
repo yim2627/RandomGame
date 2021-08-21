@@ -24,7 +24,7 @@ class ResultViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func replayGameBtnPressed(_ sender: Any) {
+    @IBAction func replayGameBtnPressed(_ sender: Any) { //재추첨 -> 메인뷰로 돌아감
         self.dismiss(animated: true, completion: nil)
     }
     

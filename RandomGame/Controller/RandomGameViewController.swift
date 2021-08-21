@@ -25,14 +25,14 @@ class RamdomGameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        editTextField(frame: inputField1)
+        editTextField(frame: inputField1) //너무 노가다처럼 보이는 면이 있어서.. 좀만 더 알면 3줄로 될것같은데.. 더 공부
         editTextField(frame: inputField2)
         editTextField(frame: inputField3)
         editTextField(frame: inputField4)
         editTextField(frame: inputField5)
         editTextField(frame: inputField6)
 
-        drawBtn.layer.cornerRadius = 10
+        drawBtn.layer.cornerRadius = 10 //이것도 함수구현에서 묶어버리고싶음
         drawBtn.layer.borderWidth = 2
         drawBtn.layer.borderColor = UIColor.black.cgColor
         adviceLabel.text = "Enter the name of the person you want to play!"
@@ -52,16 +52,16 @@ class RamdomGameViewController: UIViewController {
     func drawStr() -> String {
         let arrayNum = inputStr.count
         let randStr = inputStr[Int.random(in: 0..<arrayNum)]
-        inputStr.removeAll()
-        if randStr == "나봉" {
-            giftImage.image = UIImage(systemName: "heart.fill")
+        inputStr.removeAll() // 한번 실행할때마다 배열 비우기, 그렇지않으면 배열안으로 데이터가 계속 쌓임 -> 데이터 낭비, 중복 방지
+        if randStr == "나봉" { //배열 Test
+            giftImage.image = UIImage(systemName: "heart.fill") //image view Test
         } else {
             giftImage.image = nil
         }
         return randStr
     }
     
-    func editTextField(frame: UITextField) {
+    func editTextField(frame: UITextField) { //complete, 텍스트필드만 말고, 좀 광범위하게 해보고싶음. 향후 더 테스트 예정
         //edit to multiple textfield. for clean
         frame.layer.cornerRadius = 10
         frame.layer.borderWidth = 2
@@ -73,7 +73,6 @@ class RamdomGameViewController: UIViewController {
             let destinationVC = segue.destination as! ResultViewController
             
             destinationVC.resultString = drawStr()
-            
         }
     }
 
