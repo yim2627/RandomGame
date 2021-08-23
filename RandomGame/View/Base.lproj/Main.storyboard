@@ -107,8 +107,8 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5WO-oL-onR">
-                                <rect key="frame" x="87" y="502" width="240" height="133"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5WO-oL-onR" customClass="GIFImageView" customModule="Gifu">
+                                <rect key="frame" x="87" y="502" width="240" height="210"/>
                                 <color key="tintColor" red="0.60784316059999999" green="0.109803915" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                         </subviews>
@@ -130,7 +130,7 @@
                             <constraint firstItem="5WO-oL-onR" firstAttribute="top" secondItem="XqP-HX-VRR" secondAttribute="bottom" constant="40" id="hFw-tv-NHs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SXF-TH-2E1" secondAttribute="trailing" constant="137" id="j8e-VD-e7n"/>
                             <constraint firstItem="BM7-Ez-XO4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="k1Y-X8-UiO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5WO-oL-onR" secondAttribute="bottom" constant="227" id="mzJ-Ei-iSJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5WO-oL-onR" secondAttribute="bottom" constant="150" id="mzJ-Ei-iSJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BM7-Ez-XO4" secondAttribute="trailing" constant="20" id="sRA-yX-Mqz"/>
                             <constraint firstItem="R7s-lz-LzW" firstAttribute="top" secondItem="sI9-fZ-jMk" secondAttribute="bottom" constant="40" id="sW5-bZ-gks"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sI9-fZ-jMk" secondAttribute="trailing" constant="22" id="vdY-QL-r6a"/>
@@ -141,8 +141,8 @@
                     </view>
                     <connections>
                         <outlet property="adviceLabel" destination="kwk-9R-zqX" id="exh-A3-KXz"/>
+                        <outlet property="boomGifImage" destination="5WO-oL-onR" id="Cq6-0M-oIi"/>
                         <outlet property="drawBtn" destination="SXF-TH-2E1" id="w6r-0Y-OU0"/>
-                        <outlet property="giftImage" destination="5WO-oL-onR" id="Cq6-0M-oIi"/>
                         <outlet property="inputField1" destination="Wzf-KJ-o2T" id="Qw3-dq-U6a"/>
                         <outlet property="inputField2" destination="bqa-E0-eBg" id="SXN-7I-hBz"/>
                         <outlet property="inputField3" destination="ZEL-LV-GLR" id="ycR-1w-gx8"/>
@@ -165,10 +165,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CH-13-qPs">
-                                <rect key="frame" x="157" y="100" width="100" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CH-13-qPs">
+                                <rect key="frame" x="10" y="80" width="394" height="79"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -183,24 +182,39 @@
                                     <action selector="replayGameBtnPressed:" destination="Ahp-Vm-xff" eventType="touchUpInside" id="nsH-P5-PM7"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="glf-pT-lM8">
+                                <rect key="frame" x="57" y="239" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="pYD-gy-KG7"/>
+                                    <constraint firstAttribute="height" constant="300" id="pYo-nM-md2"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WOe-CP-lVy"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
+                            <constraint firstItem="6CH-13-qPs" firstAttribute="top" secondItem="WOe-CP-lVy" secondAttribute="top" constant="80" id="2lA-7E-kzX"/>
+                            <constraint firstItem="WOe-CP-lVy" firstAttribute="trailing" secondItem="glf-pT-lM8" secondAttribute="trailing" constant="57" id="42Y-WT-9uA"/>
+                            <constraint firstItem="glf-pT-lM8" firstAttribute="leading" secondItem="WOe-CP-lVy" secondAttribute="leading" constant="57" id="5Sy-p4-gx2"/>
                             <constraint firstItem="rzC-Hw-wF9" firstAttribute="top" secondItem="WOe-CP-lVy" secondAttribute="top" constant="613" id="CyZ-fk-Aqy"/>
                             <constraint firstItem="rzC-Hw-wF9" firstAttribute="leading" secondItem="WOe-CP-lVy" secondAttribute="leading" constant="137" id="KLN-eQ-VVW"/>
                             <constraint firstItem="WOe-CP-lVy" firstAttribute="bottom" secondItem="rzC-Hw-wF9" secondAttribute="bottom" constant="125" id="L7p-pZ-Tlm"/>
+                            <constraint firstItem="WOe-CP-lVy" firstAttribute="trailing" secondItem="6CH-13-qPs" secondAttribute="trailing" constant="10" id="hDr-AZ-x7M"/>
+                            <constraint firstItem="6CH-13-qPs" firstAttribute="leading" secondItem="WOe-CP-lVy" secondAttribute="leading" constant="10" id="ii3-SW-Qkm"/>
+                            <constraint firstItem="rzC-Hw-wF9" firstAttribute="top" secondItem="glf-pT-lM8" secondAttribute="bottom" constant="74" id="uq8-6R-Fh1"/>
                             <constraint firstItem="WOe-CP-lVy" firstAttribute="trailing" secondItem="rzC-Hw-wF9" secondAttribute="trailing" constant="137" id="vma-S7-JjB"/>
+                            <constraint firstItem="glf-pT-lM8" firstAttribute="top" secondItem="6CH-13-qPs" secondAttribute="bottom" constant="80" id="zdU-RZ-rx6"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="annoyingImage" destination="glf-pT-lM8" id="Bn0-Qp-bRD"/>
                         <outlet property="redrawBtn" destination="rzC-Hw-wF9" id="12M-mH-Swh"/>
                         <outlet property="resultLabel" destination="6CH-13-qPs" id="JwX-Vj-zkj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VOi-Am-x6s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="689.85507246376812" y="93.75"/>
+            <point key="canvasLocation" x="688.40579710144937" y="93.75"/>
         </scene>
     </scenes>
     <resources>

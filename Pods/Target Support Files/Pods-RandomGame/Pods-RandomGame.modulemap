@@ -1,0 +1,6 @@
+framework module Pods_RandomGame {
+  umbrella header "Pods-RandomGame-umbrella.h"
+
+  export *
+  module * { export * }
+}

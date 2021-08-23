@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Gifu
 
 class RamdomGameViewController: UIViewController {
 
@@ -19,7 +20,7 @@ class RamdomGameViewController: UIViewController {
     @IBOutlet weak var adviceLabel: UILabel!
     
     @IBOutlet weak var drawBtn: UIButton!
-    @IBOutlet weak var giftImage: UIImageView!
+    @IBOutlet weak var boomGifImage: GIFImageView!
     
     var inputStr = Array<String>()
 
@@ -36,6 +37,8 @@ class RamdomGameViewController: UIViewController {
         drawBtn.layer.borderWidth = 2
         drawBtn.layer.borderColor = UIColor.black.cgColor
         adviceLabel.text = "Enter the name of the person you want to play!"
+        
+        boomGifImage.animate(withGIFNamed: "boom.gif")
         // Do any additional setup after loading the view.
     }
     @IBAction func drawBtnPressed(_ sender: UIButton) {
@@ -53,11 +56,12 @@ class RamdomGameViewController: UIViewController {
         let arrayNum = inputStr.count
         let randStr = inputStr[Int.random(in: 0..<arrayNum)]
         inputStr.removeAll() // 한번 실행할때마다 배열 비우기, 그렇지않으면 배열안으로 데이터가 계속 쌓임 -> 데이터 낭비, 중복 방지
-        if randStr == "나봉" { //배열 Test
-            giftImage.image = UIImage(systemName: "heart.fill") //image view Test
-        } else {
-            giftImage.image = nil
-        }
+//        if randStr == "나봉" { //배열 Test
+//            giftImage.image = UIImage(systemName: "heart.fill") //image view Test
+//        } else {
+//            giftImage.image = nil
+//        }
+        
         return randStr
     }
     
@@ -71,8 +75,7 @@ class RamdomGameViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToResult" {
             let destinationVC = segue.destination as! ResultViewController
-            
-            destinationVC.resultString = drawStr()
+            destinationVC.resultString = "\(drawStr())!!\n YOU PAY ALLLLLL THE MONEY!!\nHAHAHA"
         }
     }
 

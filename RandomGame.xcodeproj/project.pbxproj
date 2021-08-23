@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00F47A963AE2743E83BE1A40 /* Pods_RandomGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1845DA0F4C945D6CB6040AC0 /* Pods_RandomGame.framework */; };
 		A67A5B4726CF54680020944B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67A5B4626CF54680020944B /* AppDelegate.swift */; };
 		A67A5B4926CF54680020944B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67A5B4826CF54680020944B /* SceneDelegate.swift */; };
 		A67A5B4B26CF54680020944B /* RandomGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67A5B4A26CF54680020944B /* RandomGameViewController.swift */; };
@@ -14,9 +15,12 @@
 		A67A5B5026CF546A0020944B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A67A5B4F26CF546A0020944B /* Assets.xcassets */; };
 		A67A5B5326CF546A0020944B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A67A5B5126CF546A0020944B /* LaunchScreen.storyboard */; };
 		A69429AE26D0C7AC008C0F61 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69429AD26D0C7AC008C0F61 /* ResultViewController.swift */; };
+		A6C20B3526D3B5F30032CEE5 /* boom.gif in Resources */ = {isa = PBXBuildFile; fileRef = A6C20B3426D3B5F30032CEE5 /* boom.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1845DA0F4C945D6CB6040AC0 /* Pods_RandomGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RandomGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1B46619BFDA5EBAA69A7D2E /* Pods-RandomGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomGame.debug.xcconfig"; path = "Target Support Files/Pods-RandomGame/Pods-RandomGame.debug.xcconfig"; sourceTree = "<group>"; };
 		A67A5B4326CF54680020944B /* RandomGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A67A5B4626CF54680020944B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A67A5B4826CF54680020944B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +30,8 @@
 		A67A5B5226CF546A0020944B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A67A5B5426CF546A0020944B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A69429AD26D0C7AC008C0F61 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		A6C20B3426D3B5F30032CEE5 /* boom.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = boom.gif; sourceTree = "<group>"; };
+		BB752439B5D55509995C7B34 /* Pods-RandomGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomGame.release.xcconfig"; path = "Target Support Files/Pods-RandomGame/Pods-RandomGame.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00F47A963AE2743E83BE1A40 /* Pods_RandomGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +51,8 @@
 			children = (
 				A67A5B4526CF54680020944B /* RandomGame */,
 				A67A5B4426CF54680020944B /* Products */,
+				D1E4360EF4A5F298F50D3631 /* Pods */,
+				C34B97794B15E51CD1AFA08A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +72,7 @@
 				A69429A926D0C667008C0F61 /* Controller */,
 				A69429AA26D0C671008C0F61 /* View */,
 				A67A5B4F26CF546A0020944B /* Assets.xcassets */,
+				A6C20B3626D3B5F90032CEE5 /* Resource */,
 				A67A5B5126CF546A0020944B /* LaunchScreen.storyboard */,
 				A67A5B5426CF546A0020944B /* Info.plist */,
 			);
@@ -86,6 +96,31 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		A6C20B3626D3B5F90032CEE5 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A6C20B3426D3B5F30032CEE5 /* boom.gif */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		C34B97794B15E51CD1AFA08A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1845DA0F4C945D6CB6040AC0 /* Pods_RandomGame.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D1E4360EF4A5F298F50D3631 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A1B46619BFDA5EBAA69A7D2E /* Pods-RandomGame.debug.xcconfig */,
+				BB752439B5D55509995C7B34 /* Pods-RandomGame.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -93,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A67A5B5726CF546A0020944B /* Build configuration list for PBXNativeTarget "RandomGame" */;
 			buildPhases = (
+				ACA7B3CF45FB45495A45AC67 /* [CP] Check Pods Manifest.lock */,
 				A67A5B3F26CF54680020944B /* Sources */,
 				A67A5B4026CF54680020944B /* Frameworks */,
 				A67A5B4126CF54680020944B /* Resources */,
+				8295B71BE078F1AAD5287893 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -144,12 +181,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				A67A5B5326CF546A0020944B /* LaunchScreen.storyboard in Resources */,
+				A6C20B3526D3B5F30032CEE5 /* boom.gif in Resources */,
 				A67A5B5026CF546A0020944B /* Assets.xcassets in Resources */,
 				A67A5B4E26CF54680020944B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8295B71BE078F1AAD5287893 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RandomGame/Pods-RandomGame-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RandomGame/Pods-RandomGame-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RandomGame/Pods-RandomGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACA7B3CF45FB45495A45AC67 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RandomGame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A67A5B3F26CF54680020944B /* Sources */ = {
@@ -303,6 +383,7 @@
 		};
 		A67A5B5826CF546A0020944B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1B46619BFDA5EBAA69A7D2E /* Pods-RandomGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -322,6 +403,7 @@
 		};
 		A67A5B5926CF546A0020944B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB752439B5D55509995C7B34 /* Pods-RandomGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
